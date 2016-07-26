@@ -24,3 +24,4 @@ COUNTIES = ['baringo', 'bomet', 'bungoma', 'busia',
             'tharaka - nithi', 'trans nzoia', 'turkana',
             'uasin gishu', 'vihiga', 'wajir', 'west pokot'
             ]
+NODATA = ['nairobi', 'mandera', 'samburu', 'tharaka-nithi', 'marsabit']

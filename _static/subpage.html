@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
-	<title>RoadRatio | County X</title>
+    <title>RoadRatio | {{ this_county['county_str'] }}</title>
 	<script src="assets/js/modernizr-2.6.2.min.js"></script>
 	<link rel="stylesheet" href="assets/css/css.css" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,200,400,700,400italic' rel='stylesheet' type='text/css'>
@@ -30,14 +30,14 @@
 	<header class="top">
 		<div class="wrap">
 			<a href="../" class="logo">&nbsp;</a>
-			<h1>County X expenditure data</h1>
+            <h1>{{ this_county['county_str'] }} County's expenditure data</h1>
 			<div class="inner-wrap">
 				<div class="governor primary clearfix">
 					<div class="rank">47</div>
 					<div class="details clearfix">
-						<h2 class="underlined">Nairobi County</h2>
+                        <h2 class="underlined">{{ this_county['county_str'] }} County</h2>
 						<div class="clearfix">
-							<div class="percentage">30%</div>
+                            <div class="percentage">{{ this_county['paved_roads'] }}%</div>
 						</div>
 					</div>
 				</div>

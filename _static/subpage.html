@@ -7,14 +7,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
-	<title>OurTime2Eat | County X</title>
+	<title>RoadRatio | County X</title>
 	<script src="assets/js/modernizr-2.6.2.min.js"></script>
 	<link rel="stylesheet" href="assets/css/css.css" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,200,400,700,400italic' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 
-<body class="home preload">
+<body class="sub preload">
 
 	<!-- fb share button js -->
 	<div id="fb-root"></div>
@@ -32,17 +32,15 @@
 			<a href="../" class="logo">&nbsp;</a>
 			<h1>County X expenditure data</h1>
 			<div class="inner-wrap">
-				<a class="governor primary clearfix" href="">
-					<div class="avi" style="background-image:url('assets/img/1.png')"></div>
+				<div class="governor primary clearfix">
+					<div class="rank">47</div>
 					<div class="details clearfix">
-						<div class="highlight-tag">Nairobi County</div>
-						<h2 class="underlined">Governor Kidero</h2>
+						<h2 class="underlined">Nairobi County</h2>
 						<div class="clearfix">
 							<div class="percentage">30%</div>
-							<div class="rank right">1</div>
 						</div>
 					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -55,7 +53,7 @@
 						<script type="text/javascript">
 							var dataHospitality = [
 								{value: 96000000,color:"#fede00",highlight: "#fede00",label: "Hospitality"},
-								{value: 540000000,color: "#80828b",highlight: "#878890",label: "Rest of Budget"},
+								{value: 540000000,color: "#2d7094",highlight: "#2d7094",label: "Rest of Budget"},
 							];
 						</script>
 						<canvas id="chartHospitality" width="280" height="280" class="dash-chart"></canvas>
@@ -67,7 +65,7 @@
 						<script type="text/javascript">
 							var dataTravel = [
 								{value: 755,color:"#fede00",highlight: "#fede00",label: "Travel"},
-								{value: 1404,color: "#80828b",highlight: "#878890",label: "Rest of Budget"},
+								{value: 1404,color: "#2d7094",highlight: "#2d7094",label: "Rest of Budget"},
 							];
 						</script>
 						<canvas id="chartTravel" width="300" height="300" class="dash-chart"></canvas>						
@@ -281,5 +279,7 @@
 	<script src="assets/js/jquery-1.8.1.min.js"></script>
 	<script src="assets/js/libs.js"></script>
 	<script src="assets/js/js.js"></script>
+
+	<script type="text/javascript">var county = getUrlParameter('county');</script>
 </body>
 </html>

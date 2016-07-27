@@ -39,6 +39,7 @@ def get_county_data(county):
             county_str=county.capitalize(),
             paved_roads=resp.get('paved_roads', 0),
             paved_roads_int=float(resp.get('paved_roads', 0)),
+            not_paved_roads=100 - float(resp.get('paved_roads', 0)),
             infra_budget_str=str(resp['infra_budget']['development']).replace('M', ' million'),
             infra_budget_int=int(str(resp['infra_budget']['development']).replace('M', '000000'))
             )

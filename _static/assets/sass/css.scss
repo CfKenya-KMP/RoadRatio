@@ -257,6 +257,18 @@ body {
 		}
 	}
 }
+.amcharts-chart-div a {
+    display:none !important;
+}
+#chartdiv {
+    width:1000px;
+    height:500px;
+    top:10px;
+    right:10px;
+    float:right;
+    overflow:visible;
+    z-index:-1000000;
+}
 
 .the-rest {
 	background: #626262;
@@ -380,14 +392,14 @@ body {
 @media (max-width: 1200px) {
 
 	.wrap { width: 94%; }
-
+    #chartdiv {width:500px !important;}
 }
 
 @media (max-width: 1140px) {
 
 	.governor .names { width: 50%; }
 	.governor .numbers { width: 45%; }
-
+    #chartdiv {width:400px !important;}
 } 
 
 @media (max-width: 960px) {
@@ -397,6 +409,7 @@ body {
 	.the-rest .governor { width: 100%; }
 	.the-rest .governor .names { width: 100%; }
 	.the-rest .governor .numbers { width: 100%; padding-top: 3px; margin-top: 3px; border-top: 1px dotted rgba(#000,0.1); }
+	#chartdiv {width:300px !important;}
 
 }
 
@@ -407,6 +420,7 @@ body {
 	.chart-area .chart { width: 50%; }
 	.chart-area .chart:last-child { width: 100%; margin-top: 20px; border-top-style: dotted; }
 	.chart-area .chart:last-child .inner { margin-left: 0; }
+	#chartdiv {width:300px !important;}
 
 }
 
@@ -415,7 +429,7 @@ body {
 
 	.governor .names { width: 100%; }
 	.governor .numbers { width: 100%; float: right; text-align: left; padding-top: 7px; border-top: 1px dotted rgba(#fff,0.1); }
-
+    #chartdiv {width:300px !important;}
 }
 
 
@@ -424,6 +438,7 @@ body {
 	.social-sharing.home { right: 5px; }
 
 	h1 { font-size: 24px; }
+	#chartdiv {width:300px !important;}
 
 }
 
@@ -437,6 +452,7 @@ body {
 	.chart-area .chart { width: 100%; }
 	.chart-area .chart .inner { margin-right: 20px; padding: 20px 0; }
 	.chart-area .chart:last-child .inner { padding: 30px 0 10px; }
+	#chartdiv {display:none !important;}
 
 }
 

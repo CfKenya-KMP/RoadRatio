@@ -257,6 +257,25 @@ body {
 		}
 	}
 }
+.amcharts-chart-div a {
+    display:none !important;
+}
+#chartdiv {
+    width:40%;
+    height:500px;
+    top:10px;
+    right:10px;
+    float:right;
+    overflow:visible !important;
+    z-index:1000000;
+}
+.nwrap {
+    width:60%;
+    float:left;
+}
+.header-wrap {
+    min-height:400px;
+}
 
 .the-rest {
 	background: #626262;
@@ -380,14 +399,12 @@ body {
 @media (max-width: 1200px) {
 
 	.wrap { width: 94%; }
-
 }
 
 @media (max-width: 1140px) {
 
 	.governor .names { width: 50%; }
 	.governor .numbers { width: 45%; }
-
 } 
 
 @media (max-width: 960px) {
@@ -415,7 +432,6 @@ body {
 
 	.governor .names { width: 100%; }
 	.governor .numbers { width: 100%; float: right; text-align: left; padding-top: 7px; border-top: 1px dotted rgba(#fff,0.1); }
-
 }
 
 
@@ -437,6 +453,9 @@ body {
 	.chart-area .chart { width: 100%; }
 	.chart-area .chart .inner { margin-right: 20px; padding: 20px 0; }
 	.chart-area .chart:last-child .inner { padding: 30px 0 10px; }
+	#chartdiv {display:none !important;}
+	.nwrap {width:100%;}
+	.header-wrap {min-height:250px;}
 
 }
 
@@ -447,4 +466,69 @@ body {
 --------------------------------------------------- */
 
 
+/*--------------------------------------------------
+04 Story page
+--------------------------------------------------- */
+.content {
+    background: #fff;
+    padding-bottom:17px;
+    min-height:700px;
+}
+.story-top {
+    min-height:20px !important;
+    text-alighn:left;
+}
+.story-top .p {
+    font-size:24px;
+}
 
+.story-top .small {
+    font-size:12px;
+    color: $yellow-primary;
+}
+.story-top h1 :after, :before {
+    content: none;
+}
+
+/*--------------------------------------------------
+04 News
+--------------------------------------------------- */
+
+.news {
+    background:$yellow-primary;
+    color: #333;
+    min-height:120px;
+	padding: 40px 0;
+	font-weight: 400;
+	line-height: 1.35;
+	font-size: 16px;
+
+	.news-box {
+		width: 30.33%;
+		float: left;
+		padding:0px 8px;
+
+        a {
+            color: #333;
+        }
+
+		.inner {
+			margin-right: 40px;
+		}
+
+		&:last-child {
+			border-top: 1px solid rgba(#fff,0.1);
+
+			.inner {
+				margin-right: 0;
+				margin-left: 40px;
+				padding-top: 20px;
+			}
+		}
+
+		em {
+			color: #333;
+			font-style: normal;
+		}
+	}
+}

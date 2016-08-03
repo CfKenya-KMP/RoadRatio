@@ -106,6 +106,10 @@ def subpage():
             _county_data = each
     return render_template('subpage.html', this_county=_county_data, county_payload=sorted_data)
 
+@app.route('/story')
+def story():
+    return render_template('story.html')
+
 ### END OF VIEWS
 
 manager = Manager(app)

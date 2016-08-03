@@ -106,12 +106,13 @@ jQuery(function($) {
 
           areasSettings: {
             autoZoom: false,
-            "selectedColor": "#187db4",
-            "unselectedColor": "#ffe84a",
-            "colorSolid": "#187db4",
+            "color": "#187db4",
+            "selectedColor": "#ffe84a",
+            "unselectedColor": "#187db4",//#ffe84a",
+            "colorSolid": "#ffe84a",
             "selectable": true,
             "outlineColor": "#fff",
-            "rollOverOutlineColor": "#187db4",
+            "rollOverOutlineColor": "#ffe84a",
           },
 
           "export": {
@@ -123,7 +124,7 @@ jQuery(function($) {
         });
         map.addListener("clickMapObject", function (event) {
             county = translateTitletoID(event.mapObject.id);
-            nodata = ['nairobi', 'mandera', 'samburu', 'tharaka-nithi', 'marsabit', 'tharaka']
+            nodata = ['nairobi', 'mandera', 'samburu', 'tharaka-nithi', 'marsabit']
             if (nodata.indexOf(county) > -1){
                 alert("We don't have data for this county yet. We are working on it.")
             } else {

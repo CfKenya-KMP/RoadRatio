@@ -5,6 +5,7 @@ import redis
 import os
 from roadratio.app import config as config_file
 from normality import slugify
+from roadratio.app import chart
 
 app = Flask(__name__,
         template_folder=os.getenv('ROAD_RATIO_TEMPLATES'),
@@ -104,7 +105,9 @@ def subpage():
 
         if each['county'] == _county: # hook to isolate the `_county`
             _county_data = each
-    return render_template('subpage.html', this_county=_county_data, county_payload=sorted_data)
+    
+    url = chart.bar_chart(county, dict(infra_budget=_county_data['infra_budget_int'], total_budget=98000000))
+    return render_template('subpage.html', this_county=_county_data, county_payload=sorted_data, chart_url=url)
 
 @app.route('/story')
 def story():

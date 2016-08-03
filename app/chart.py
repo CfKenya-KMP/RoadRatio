@@ -2,14 +2,30 @@ import plotly.offline as off
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-fig = dict(
-    data = [go.Bar(
-                x=['development', 'recurrent', 'total'],
-                y=[1000000, 500000, 5000000]
-        )],
-    layout = {'title': 'Infrastructure Budget'}
-    )
+
+def bar_chart(filename, columns, **kwargs):
+    '''
+    return URL to a bar chart on plotly
+
+    @filename:   name of the file (crazy, huh?)
+    @columns:    `dict` with column names and values
+    @kwargs:     anything else you wanna pass to plotly.plotly.plot
+    '''
+    print "%s --  %s" % (columns.keys(), columns.values())
+    figure = dict(
+            data = [go.Bar(
+                x=columns.keys(), y=columns.values()
+                )],
+            layout = dict(
+                title="Road Ratio %s" % filename
+                )
+            )
+    return py.plot(figure, filename=filename, auto_open=False, fileopt='overwrite')
 
 
-#py.plot(data, filename='basic-bar')
-off.plot(fig, output_type='div', filename='infra')
+
+if __name__ == '__main__':
+    county = "gotham"
+    data = dict(bananas=5, oranges=7, monkeys=3)
+    url = bar_chart(county, data)
+    print url

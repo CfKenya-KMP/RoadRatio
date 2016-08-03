@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]--> 
-<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"<![endif]--> 
-<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
-<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
+<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"<![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
@@ -27,25 +27,26 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<div id="chartdiv"></div>
 	<header class="top">
-		<div class="wrap">
-			<div class="inner-wrap">
+		<div class="wrap header-wrap">
+			<div class="wrap nwrap">
 				<a href="../" class="logo">&nbsp;</a>
 				<h1>{{ this_county['county_str'] }} County's expenditure data</h1>
-				<div class="governor primary clearfix">
-                    <div class="rank">{{ this_county['rank'] }}</div>
-					<div class="details clearfix">
-                        <h2 class="underlined">{{ this_county['county_str'] }} County</h2>
-						<div class="clearfix">
-                            <div class="percentage">{{ this_county['paved_roads'] }}%</div>
+				<div class="inner-wrap">
+					<div class="governor primary clearfix">
+						<div class="rank">{{ this_county['rank'] }}</div>
+						<div class="details clearfix">
+							<h2 class="underlined">{{ this_county['county_str'] }} County</h2>
+							<div class="clearfix">
+								<div class="percentage">{{ this_county['paved_roads'] }}%</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div id="chartdiv"></div>
 		</div>
 	</header>
-
 
 	<div class="chart-area">
 		<div class="wrap">
@@ -102,10 +103,10 @@
                 <a href="subpage.html?county={{ county['county'] }}" class="governor">
 					<div class="wrap">
 						<div class="inner-wrap clearfix">
-							<div class="details clearfix">					
+							<div class="details clearfix">
 								<div class="names">
 									<div class="highlight-tag"></div>
-                                    <h2>{{ county['county_str'] }}</h2>							
+                                    <h2>{{ county['county_str'] }}</h2>
 								</div>
 								<div class="numbers">
                                     <div class="percentage">{{ county['paved_roads'] }}%</div>
@@ -118,7 +119,7 @@
                 {% endfor %}
 
 			</div>
-			
+
 		</div>
 
 	</div><!-- the-rest -->
@@ -142,13 +143,12 @@
 			</div>
 		</div>
 	</footer><!-- .bottom -->
-		
+
 	<script src="assets/js/jquery-1.8.1.min.js"></script>
 	<script src="assets/js/libs.js"></script>
 	<script src="assets/js/js.js"></script>
 	<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
 	<script src="https://www.amcharts.com/lib/3/maps/js/kenyaHigh.js"></script>
-	<script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
 	<script type="text/javascript">var county = getUrlParameter('county');</script>
 </body>
 </html>

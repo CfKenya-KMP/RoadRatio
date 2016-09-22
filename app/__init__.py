@@ -106,8 +106,10 @@ def subpage():
         if each['county'] == _county: # hook to isolate the `_county`
             _county_data = each
     
-    url = chart.bar_chart(county, dict(infra_budget=_county_data['infra_budget_int'], total_budget=98000000))
-    return render_template('subpage.html', this_county=_county_data, county_payload=sorted_data, chart_url=url)
+    #url = chart.bar_chart(county, dict(infra_budget=_county_data['infra_budget_int'], total_budget=98000000))
+    #return render_template('subpage.html', this_county=_county_data, county_payload=sorted_data, chart_url=url)
+    
+    return render_template('subpage.html', this_county=_county_data, county_payload=sorted_data)
 
 @app.route('/story')
 def story():
